@@ -1,6 +1,10 @@
+"use client"
+
 import { Page2 } from "./Page2"
+import HTMLFlipBook from 'react-pageflip';
 
 export const Book2 = () => {
+
   const image = "/images/page9.jpg"
   const tags = [
     {
@@ -43,9 +47,17 @@ export const Book2 = () => {
 
   return (
     <>
-      <div className='flex justify-center gap-2 w-full h-full items-center'>
-        <Page2 image={image} tags={tags} className='hidden lg:block' />
-        <Page2 image={image} tags={tags} className='block' />
+      <div className="flex justify-center items-center border-2 border-red-400 h-screen overflow-hidden">
+        <HTMLFlipBook width={300} height={500}>
+          <div className="flex justify-center w-full h-full items-center"><Page2 image={"https://cklass.com/cdn/shop/files/Dama_a063c674-b74b-4de7-90ee-453376e3525d_large.jpg?v=1720798425"} tags={tags} className='block' /></div>
+          <div className="flex justify-center w-full h-full items-center"><Page2 image={image} tags={tags} className='block' /></div>
+          <div className="flex justify-center w-full h-full items-center"><Page2 image={image} tags={tags} className='block' /></div>
+          <div className="flex justify-center w-full h-full items-center"><Page2 image={image} tags={tags} className='block' /></div>
+          <div className="flex justify-center w-full h-full items-center"><Page2 image={image} tags={tags} className='block' /></div>
+          <div className="flex justify-center w-full h-full items-center"><Page2 image={image} tags={tags} className='block' /></div>
+          <div className="flex justify-center w-full h-full items-center"><Page2 image={image} tags={tags} className='block' /></div>
+          <div className="flex justify-center w-full h-full items-center"><Page2 image={"https://cklass.com/cdn/shop/files/Dama_a063c674-b74b-4de7-90ee-453376e3525d_large.jpg?v=1720798425"} tags={tags} className='block' /></div>
+        </HTMLFlipBook>
       </div>
     </>
   )
